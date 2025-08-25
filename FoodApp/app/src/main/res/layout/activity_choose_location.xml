@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChooseLocationActivity">
+
+    <TextView
+        android:id="@+id/tvChooseLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="Choose Your Location"
+        android:textSize="25sp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/black"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvLocationBox"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:background="@drawable/edittextshape"
+        app:endIconDrawable="@drawable/arrow_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvChooseLocation"
+        android:layout_marginTop="10dp"
+        >
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listOfLocation"
+            android:text="Choose Location"
+            android:fontFamily="@font/lato_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textViewToProvideWith"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLocationBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="To provide you with the best dining experience, we need your permission to access your device's location. By enabling location services, we can offer personalized restaurant recommendations, accurate delivery estimates, and ensure a seamless food delivery experience."
+        />
+
+
+    <TextView
+        android:id="@+id/textViewDesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center"
+        android:textColor="#1FC57A"
+        android:textSize="16sp"
+        android:text="Design By\n Nohel Kumar Nath"
+        android:fontFamily="@font/yeonsung_regular"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

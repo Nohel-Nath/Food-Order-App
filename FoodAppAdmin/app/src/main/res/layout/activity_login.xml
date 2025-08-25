@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvWavesOfFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yeonsung_regular"
+        android:text="Waves Of Food"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+
+
+    <TextView
+        android:id="@+id/tvLoginAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Login To Your\n Admin Dashboard"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/very_light_malachite_green"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/tvWavesOfFood"
+        app:layout_constraintStart_toStartOf="@id/tvWavesOfFood"
+        app:layout_constraintTop_toBottomOf="@id/tvWavesOfFood" />
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="5dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="15dp"
+        android:background="@drawable/edittextshape"
+        android:hint="Email"
+        android:minHeight="48dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginAcc" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="15dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:background="@drawable/edittextshape"
+        android:minHeight="48dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Or"
+        android:textColor="#09051C"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="@id/etPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <TextView
+        android:id="@+id/tvContinueWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue With"
+        android:textColor="@color/very_light_malachite_green"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/tvOr"
+        app:layout_constraintStart_toStartOf="@id/tvOr"
+        app:layout_constraintTop_toBottomOf="@id/tvOr" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonFb"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:drawableLeft="@drawable/facebook"
+        android:text="Facebook"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textColor="#09051C"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/whitebutton"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGoogle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContinueWith" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGoogle"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:drawableLeft="@drawable/google"
+        android:text="Google"
+        android:textSize="14sp"
+        android:paddingLeft="15dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/whitebutton"
+        android:textColor="#09051C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFb"
+        app:layout_constraintTop_toBottomOf="@id/tvContinueWith" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:background="@drawable/greenbuttongradient"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonFb"
+        app:layout_constraintStart_toStartOf="@id/buttonFb"
+        app:layout_constraintEnd_toEndOf="@id/buttonGoogle"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:fontFamily="@font/yeonsung_regular"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tvDontAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:textColor="@color/very_light_malachite_green"
+        android:text="Don’t Have Account?"
+        />
+
+    <TextView
+        android:id="@+id/textViewDesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center"
+        android:textColor="#1FC57A"
+        android:textSize="16sp"
+        android:text="Design By\n Nohel Kumar Nath"
+        android:fontFamily="@font/yeonsung_regular"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

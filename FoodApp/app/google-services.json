@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "1089017592882",
+    "firebase_url": "https://foodorderingapp-70db2-default-rtdb.firebaseio.com",
+    "project_id": "foodorderingapp-70db2",
+    "storage_bucket": "foodorderingapp-70db2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089017592882:android:a779282d5ddf83608ed02b",
+        "android_client_info": {
+          "package_name": "com.example.foodorderingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089017592882-b48aj0chkk458jel7heoji573cj6kdo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa7p0M_MsbvH5sXxkKcPm6co331CLWzsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089017592882-b48aj0chkk458jel7heoji573cj6kdo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089017592882:android:df4133ef48659abb8ed02b",
+        "android_client_info": {
+          "package_name": "com.example.foodorderingappadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089017592882-973kflcckpghi86natug5sg9p4prf3ss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodorderingappadmin",
+            "certificate_hash": "943a56085c8f1aff553624de7356208b8971f394"
+          }
+        },
+        {
+          "client_id": "1089017592882-b48aj0chkk458jel7heoji573cj6kdo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa7p0M_MsbvH5sXxkKcPm6co331CLWzsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089017592882-b48aj0chkk458jel7heoji573cj6kdo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

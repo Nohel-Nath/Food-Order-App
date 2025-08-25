@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CongratsBottomSheetFragment">
+
+    <TextView
+        android:id="@+id/tvCongrats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/yeonsung_regular"
+        android:gravity="center"
+        android:text="Congrats \n Your Order Placed"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="172dp"
+        android:layout_height="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCongrats"
+        app:srcCompat="@drawable/congratulation" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoHome"
+        android:background="@drawable/greenbuttongradient"
+        android:layout_width="157dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/yeonsung_regular"
+        app:layout_constraintTop_toBottomOf="@id/ivRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

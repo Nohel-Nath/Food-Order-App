@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/cartFoodImg"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/menu5"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Food Name"
+                android:textColor="#09051C"
+                android:textSize="15sp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toEndOf="@id/cartFoodImg"
+                app:layout_constraintTop_toTopOf="@id/cartFoodImg" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Quantity"
+                android:textColor="#09051C"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintBottom_toBottomOf="@id/cartFoodImg"
+                app:layout_constraintStart_toEndOf="@id/cartFoodImg"
+                />
+
+            <TextView
+                android:id="@+id/tvQuantityNum"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#53E88B"
+                app:layout_constraintBottom_toBottomOf="@id/tvQuantity"
+                app:layout_constraintStart_toEndOf="@id/tvQuantity"
+                app:layout_constraintTop_toTopOf="@id/tvQuantity" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="10$"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#53E88B"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvQuantity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvFoodName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewItem"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivFoodImage"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/menu7"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvFoodItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Food Name"
+                android:textColor="#09051C"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/ivFoodImage"
+                app:layout_constraintTop_toTopOf="@id/ivFoodImage" />
+
+            <TextView
+                android:id="@+id/tvFoodPriceCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:text="$7"
+                android:textColor="#53E88B"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFoodImage"
+                app:layout_constraintStart_toEndOf="@id/ivFoodImage" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBuyAgain"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/buyagainbtngradient"
+                android:fontFamily="@font/yeonsung_regular"
+                android:text="Buy Again"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvFoodPriceCart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvFoodItemName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

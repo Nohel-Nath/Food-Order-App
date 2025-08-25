@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="very_light_malachite_green">#53E88B</color>
+    <color name="green_crayola">#15BE77</color>
+    <color name ="iconColor">#FEAD1D</color>
+</resources>

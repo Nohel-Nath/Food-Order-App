@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddItemActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/arrow_left"
+                />
+
+            <TextView
+                android:id="@+id/add_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Add Item"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:fontFamily="@font/yeonsung_regular"
+                />
+            
+            <EditText
+                android:id="@+id/etItemName"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="Enter Food Name"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="20sp"
+                android:background="@drawable/edittextshape"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_item"
+                android:layout_marginTop="16dp"
+                android:elevation="5dp"
+                android:inputType="text"
+                />
+
+            <EditText
+                android:id="@+id/etItemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="Enter Food Price"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="20sp"
+                android:background="@drawable/edittextshape"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etItemName"
+                android:layout_marginTop="16dp"
+                android:elevation="5dp"
+                android:inputType="text"
+                />
+
+            <EditText
+                android:id="@+id/etSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="Paste Food Image Uri"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="20sp"
+                android:inputType="textUri"
+                android:background="@drawable/edittextshape"
+                android:textColor="@color/black"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etItemPrice"
+                android:layout_marginTop="16dp"
+                android:elevation="5dp"
+                />
+            
+            <ImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu1"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/etSelectImage"
+                android:layout_marginHorizontal="100dp"/>
+
+            <TextView
+                android:id="@+id/tvShortDescription"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="Short Description"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="20sp"
+                android:background="@drawable/edittextshape"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivItemImage"
+                android:layout_marginTop="16dp"
+                android:elevation="5dp"
+                />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:layout_marginHorizontal="12dp"
+                android:background="@color/white"
+                android:textSize="20sp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShortDescription"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:hint="Ingredients"
+                android:layout_marginHorizontal="12dp"
+                android:textSize="20sp"
+                android:background="@drawable/edittextshape"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/yeonsung_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etDescription"
+                android:layout_marginTop="16dp"
+                android:elevation="5dp"
+                />
+            <EditText
+                android:id="@+id/etIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:layout_marginHorizontal="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:text="N"
+                app:layout_constraintTop_toBottomOf="@id/tvIngredients"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddItem"
+                android:background="@drawable/greenbuttongradient"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/etIngredients"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                android:fontFamily="@font/yeonsung_regular"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
