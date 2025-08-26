@@ -53,9 +53,25 @@ class HistoryFragment : Fragment() {
     }
 
     private fun updateOrderStatus() {
+//        val itemPushKey = listOfOrderItem[0].itemPushKey
+//        val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey!!)
+//        completeOrderReference.child("paymentReceived").setValue(true)
         val itemPushKey = listOfOrderItem[0].itemPushKey
-        val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey!!)
+        if (itemPushKey.isNullOrEmpty()) {
+            android.util.Log.d("HistoryFragment", "itemPushKey is null")
+            return
+        }
+        val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey)
         completeOrderReference.child("paymentReceived").setValue(true)
+            .addOnSuccessListener {
+                android.util.Log.d("HistoryFragment", "paymentReceived updated successfully")
+            }
+            .addOnFailureListener { e ->
+                android.util.Log.d(
+                    "HistoryFragment",
+                    "Failed to update paymentReceived: ${e.message}"
+                )
+            }
     }
 
     private fun setItemsRecentBuy() {
@@ -110,7 +126,7 @@ class HistoryFragment : Fragment() {
                     setPreviousBuyItemsRecycleView()
                 }
                 val isOrderAccepted = listOfOrderItem[0].orderAccepted
-                if(isOrderAccepted){
+                if (isOrderAccepted) {
                     cvGreen.background.setTint(Color.GREEN)
                     btnReceived.visibility = View.VISIBLE
                 }
